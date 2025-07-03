@@ -1,51 +1,21 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem.Android.LowLevel;
 
 public class Dice : MonoBehaviour
 {
-    private Sprite[] diceSides;
-    private SpriteRenderer rend;
-    private int whosTurn = 1;
-    private bool coroutineAllowed = true;
+    public Sprite[] faces; // 6 sprites do dado, do 1 ao 6
+    public SpriteRenderer diceRenderer; // Referência ao SpriteRenderer
 
-    private void Start()
+    public int Roll()
     {
-        rend = GetComponent<SpriteRenderer>();
-        diceSides = Resources.LoadAll<Sprite>("DiceSides/");
-        rend.sprite = diceSides[5];
-    }
+        int result = Random.Range(1, 7); // Valor de 1 a 6
+        Debug.Log("Dado rolado: " + result);
 
-    private void OnMouseDown()
-    {
-        if (!GameControl.gameOver && coroutineAllowed)
-            StartCoroutine("RollTheDice");
-    }
-
-    private IEnumerator RollTheDice()
-    {
-        coroutineAllowed = false;
-        int randomDiceSide = 0;
-        for (int i = 0; i <= 20; i++)
+        // Mostrar a imagem correspondente
+        if (diceRenderer != null && faces != null && faces.Length >= 6)
         {
-            randomDiceSide = Random.Range(0, 6);
-            rend.sprite = diceSides[randomDiceSide];
-            yield return new WaitForSeconds(0.05f);
+            diceRenderer.sprite = faces[result - 1]; // -1 pois o array começa no 0
         }
 
-        GameControl.diceSideThrown = randomDiceSide = 1;
-        if (whosTurn == 1)
-        {
-            GameControl.MovePlayer(1);
-        }
-        
-        else if (whosTurn == -1)
-        {
-            GameControl.MovePlayer(2);
-        }
-
-        whosTurn += 1;
-        coroutineAllowed = true;
-
+        return result;
     }
 }
