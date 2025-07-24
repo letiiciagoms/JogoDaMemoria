@@ -19,7 +19,7 @@ public class TcpClienteUnity : MonoBehaviour
         string mensagem = input.text;
         if (string.IsNullOrWhiteSpace(mensagem)) return;
 
-        TcpClient client = new TcpClient("127.0.0.1", 8080);
+        TcpClient client = new TcpClient("10.57.10.31", 8080);
         NetworkStream stream = client.GetStream();
         byte[] data = Encoding.UTF8.GetBytes(mensagem);
         stream.Write(data, 0, data.Length);
