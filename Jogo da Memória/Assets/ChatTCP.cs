@@ -8,7 +8,7 @@ using TMPro;
 public class ChatTCP : MonoBehaviour
 {
     public TMP_InputField inputMensagem; 
-   public TMP_Text chatArea;
+    public TMP_Text chatArea;
 
     // Fila de mensagens recebidas
     private readonly Queue<string> mensagensRecebidas = new Queue<string>();
