@@ -212,54 +212,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1760234437}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &61492772
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 61492774}
-  - component: {fileID: 61492773}
-  m_Layer: 0
-  m_Name: Client
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &61492773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61492772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05197839b300d484db3bff37e2b14c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 514459285}
-  sendButton: {fileID: 894136114}
-  serverIP: 192.168.88.247
-  port: 8080
---- !u!4 &61492774
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61492772}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173042040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,8 +1855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 0}
   sendButton: {fileID: 0}
-  serverIP: 127.0.0.1
-  port: 8080
 --- !u!1 &1333837933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2576,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1822260938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822260940}
+  - component: {fileID: 1822260939}
+  m_Layer: 0
+  m_Name: Client
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1822260939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822260938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06b081b52c9dd246b35b67482b10695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 514459285}
+  sendButton: {fileID: 894136114}
+--- !u!4 &1822260940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822260938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -130.4715, y: 265.46045, z: -2.279533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895223442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,8 +3043,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 0}
   sendButton: {fileID: 0}
-  serverIP: 127.0.0.1
-  port: 8080
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3064,4 +3058,4 @@ SceneRoots:
   - {fileID: 1797984620}
   - {fileID: 857371773}
   - {fileID: 378744158}
-  - {fileID: 61492774}
+  - {fileID: 1822260940}
