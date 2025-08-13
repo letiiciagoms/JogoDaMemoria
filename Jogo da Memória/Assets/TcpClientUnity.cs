@@ -20,7 +20,7 @@ public class TcpClientUnity : MonoBehaviour
 
         try
         {
-            TcpClient client = new TcpClient("10.57.10.32", 8080); // Conecta ao servidor
+            TcpClient client = new TcpClient("10.57.1.52", 8080); // Conecta ao servidor
             NetworkStream stream = client.GetStream();
 
             // Envia mensagem
